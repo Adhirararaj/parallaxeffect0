@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax</title>
     <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
     <header>
@@ -39,5 +41,23 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ab incidunt dignissimos possimus nulla tempore illum corrupti officia eveniet, voluptate suscipit placeat! Delectus, voluptates ipsam, sed provident quas doloremque et, quod facilis dolorum molestias excepturi? Officia sed nihil quam neque perferendis ipsum, at distinctio quod, voluptate optio non ducimus modi ipsa. Eos placeat voluptate amet? Quos, totam incidunt consequuntur qui praesentium aliquam in voluptatum. Numquam porro tenetur quam animi, ullam deleniti est incidunt reiciendis ut tempore, quia commodi? Ab facilis cumque et veniam asperiores quas rem aliquid maxime quidem consequuntur officiis voluptatum incidunt odio, beatae deserunt eius culpa? Suscipit illum alias sequi a ab nobis, corporis officiis, blanditiis doloremque cum ea, porro odio quae vitae dolorum. Temporibus architecto, nisi hic deleniti minus laudantium ratione in laboriosam eius! Explicabo, officiis <br>
         </p>
     </section>
+    <script>
+        let text = document.getElementById('text');
+        let leaf = document.getElementById('leaf');
+        let hill1 = document.getElementById('hill1');
+        let hill4 = document.getElementById('hill4');
+        let hill5 = document.getElementById('hill5');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            text.style.marginTop = value * 2.5 + 'px';
+            leaf.style.top = value * -1.5 + 'px';
+            leaf.style.left = value * 1.5 + 'px';
+            hill5.style.left = value * 1.5 + 'px';
+            hill4.style.left = value * -1.5 + 'px';
+            hill1.style.top = value * 1 + 'px';
+})
+    </script>
 </body>
 </html>
